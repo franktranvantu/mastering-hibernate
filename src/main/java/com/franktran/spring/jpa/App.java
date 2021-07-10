@@ -12,6 +12,8 @@ public class App {
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
         entityManager.persist(new Person(1L, "Frank", "Tran"));
+        entityManager.createQuery("SELECT p FROM People p");
+        entityManager.createNativeQuery("SELECT * FROM people");
         transaction.commit();
         entityManager.close();
     }

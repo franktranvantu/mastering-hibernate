@@ -6,8 +6,10 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity
+@Entity(name = "People")
+@Table(name = "people")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
